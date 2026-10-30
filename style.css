@@ -1762,3 +1762,273 @@ body.mac-ready .mac-desktop {
         transition-duration: 0.01ms !important;
     }
 }
+
+
+/* =====================================
+   PIXEL IDLE ANIMATIONS
+   ===================================== */
+
+/* HAPPY MAC LOOKS ALIVE */
+
+.happy-face {
+    animation: happy-bounce 3s steps(4) infinite;
+}
+
+.mini-happy {
+    animation: mini-bounce 2.5s steps(3) infinite;
+}
+
+@keyframes happy-bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-4px);
+    }
+}
+
+@keyframes mini-bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+
+/* BLINKING PIXEL LIGHTS */
+
+.screen-colors i:nth-child(1) {
+    animation: pixel-blink 2s steps(2) infinite;
+}
+
+.screen-colors i:nth-child(2) {
+    animation: pixel-blink 2s steps(2) 0.5s infinite;
+}
+
+.screen-colors i:nth-child(3) {
+    animation: pixel-blink 2s steps(2) 1s infinite;
+}
+
+@keyframes pixel-blink {
+    0%, 100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.25;
+    }
+}
+
+
+/* COMMAND SYMBOL FLOATS */
+
+.command-art > span {
+    display: inline-block;
+    animation: command-float 4s steps(5) infinite;
+}
+
+@keyframes command-float {
+    0%, 100% {
+        transform: translateY(0) rotate(0);
+    }
+
+    50% {
+        transform: translateY(-6px) rotate(5deg);
+    }
+}
+
+
+/* PLAYING CARDS MOVE */
+
+.cards-art .playing-card {
+    animation: card-float 3s steps(4) infinite;
+}
+
+.cards-art .white-card {
+    animation-delay: 0.5s;
+}
+
+@keyframes card-float {
+    0%, 100% {
+        transform: translateY(0) rotate(0);
+    }
+
+    50% {
+        transform: translateY(-7px) rotate(4deg);
+    }
+}
+
+
+/* PAINT TOOLS MOVE */
+
+.tools-art .paint-tool {
+    animation: tool-move 3s steps(4) infinite;
+    transform-origin: center;
+}
+
+.tools-art .trash-can {
+    animation: trash-bounce 4s steps(4) infinite;
+}
+
+@keyframes tool-move {
+    0%, 100% {
+        transform: rotate(0);
+    }
+
+    50% {
+        transform: rotate(-8deg);
+    }
+}
+
+@keyframes trash-bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-3px);
+    }
+}
+
+
+/* NEXT FOLDER IDLE MOVEMENT */
+
+.next-art .folder-front {
+    animation: folder-move 4s steps(4) infinite;
+}
+
+@keyframes folder-move {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-4px);
+    }
+}
+
+
+/* PIXEL ICON HOVER EFFECTS */
+
+.work-card:hover .work-art {
+    filter: contrast(1.15);
+}
+
+.work-card:hover .mini-happy {
+    animation: happy-bounce 0.5s steps(4) infinite;
+}
+
+
+/* TIMELINE PIXELS */
+
+.timeline-node {
+    animation: timeline-pulse 2s steps(2) infinite;
+}
+
+@keyframes timeline-pulse {
+    0%, 100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: 0.4;
+        transform: scale(1.3);
+    }
+}
+
+
+/* BRAND LOGO BLINK */
+
+.brand-mark {
+    animation: logo-blink 5s steps(2) infinite;
+}
+
+@keyframes logo-blink {
+    0%, 95%, 100% {
+        opacity: 1;
+    }
+
+    97% {
+        opacity: 0.5;
+    }
+}
+
+
+/* PIXEL STAR SPARKLES */
+
+.hero-art {
+    position: relative;
+}
+
+.hero-art::after {
+    content: "";
+    position: absolute;
+    top: 12%;
+    right: 8%;
+    width: 4px;
+    height: 4px;
+    background: #111111;
+    box-shadow:
+        -110px 55px #111111,
+        -40px 100px #111111,
+        25px 130px #111111,
+        -150px 170px #111111,
+        70px 40px #111111;
+    animation: pixel-twinkle 3s steps(2) infinite;
+    pointer-events: none;
+}
+
+@keyframes pixel-twinkle {
+    0%, 100% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+}
+
+
+/* RETRO WINDOW TITLEBAR */
+
+.mac-window-titlebar {
+    background-size: 100% 100%;
+    animation: titlebar-flash 6s steps(2) infinite;
+}
+
+@keyframes titlebar-flash {
+    0%, 90%, 100% {
+        filter: none;
+    }
+
+    95% {
+        filter: contrast(1.3);
+    }
+}
+
+
+/* BUTTONS FEEL CLICKABLE */
+
+.main-nav a:active,
+.primary-link:active,
+.source-list a:active {
+    transform: translate(2px, 2px);
+    box-shadow: none;
+}
+
+
+/* STOP ANIMATIONS WHEN REDUCED MOTION IS REQUESTED */
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation: none !important;
+        transition: none !important;
+    }
+}
