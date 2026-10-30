@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="en">
 
@@ -10,12 +11,44 @@
 </head>
 
 <body>
+
+    <!-- MACINTOSH STARTUP SCREEN -->
+    <div class="boot-screen" id="boot-screen">
+        <div class="boot-content">
+
+            <div class="boot-happy-mac">
+                <span class="boot-eye"></span>
+                <span class="boot-eye"></span>
+                <span class="boot-smile"></span>
+            </div>
+
+            <h1>Welcome to Macintosh</h1>
+
+            <p class="boot-version">
+                SUSAN KARE EDITION · SYSTEM 1984
+            </p>
+
+            <div class="boot-progress">
+                <span></span>
+            </div>
+
+            <p class="boot-loading-text">Starting up...</p>
+
+            <button class="boot-skip" id="boot-skip" type="button">
+                CLICK TO CONTINUE
+            </button>
+
+        </div>
+    </div>
+
+    <!-- MACINTOSH DESKTOP -->
     <div class="mac-desktop">
 
-        <!-- MACINTOSH MENU BAR -->
+        <!-- TOP MENU BAR -->
         <div class="mac-menubar">
+
             <div class="menu-left">
-                <a class="apple-menu" href="#home" aria-label="Apple menu">●</a>
+                <a class="apple-menu" href="#home">●</a>
                 <span class="menu-bold">Susan Kare</span>
                 <span>File</span>
                 <span>Edit</span>
@@ -27,6 +60,7 @@
                 <span class="menu-status">●</span>
                 <span>Macintosh HD</span>
             </div>
+
         </div>
 
         <!-- DESKTOP ICONS -->
@@ -40,26 +74,26 @@
             <span>Her Artwork</span>
         </div>
 
-        <!-- MAIN MACINTOSH WINDOW -->
+        <!-- MAIN WINDOW -->
         <div class="mac-window">
 
             <div class="mac-window-titlebar">
-                <span class="window-control" aria-hidden="true"></span>
-                <span class="titlebar-stripes" aria-hidden="true"></span>
+                <span class="window-control"></span>
+                <span class="titlebar-stripes"></span>
                 <span class="window-title">Susan Kare — The Art of the Pixel</span>
-                <span class="titlebar-stripes" aria-hidden="true"></span>
-                <span class="window-control right-control" aria-hidden="true"></span>
+                <span class="titlebar-stripes"></span>
+                <span class="window-control right-control"></span>
             </div>
 
             <!-- HEADER -->
             <header class="site-header" id="home">
 
-                <a class="brand" href="#home" aria-label="Susan Kare home">
+                <a class="brand" href="#home">
                     <span class="brand-mark">SK</span>
                     <span>SUSAN KARE</span>
                 </a>
 
-                <nav class="main-nav" aria-label="Main navigation">
+                <nav class="main-nav">
                     <a href="#home">HOME</a>
                     <a href="#biography">BIOGRAPHY</a>
                     <a href="#works">WORKS</a>
@@ -75,13 +109,18 @@
                 <section class="hero section-shell">
 
                     <div class="hero-copy">
-                        <p class="eyebrow">GUI PIONEER <span>1982–PRESENT</span></p>
+
+                        <p class="eyebrow">
+                            GUI PIONEER <span>1982–PRESENT</span>
+                        </p>
 
                         <h1>
-                            SUSAN<br>KARE<span class="cursor" aria-hidden="true"></span>
+                            SUSAN<br>KARE<span class="cursor"></span>
                         </h1>
 
-                        <p class="underlined-subtitle">The Art of the Pixel</p>
+                        <p class="underlined-subtitle">
+                            The Art of the Pixel
+                        </p>
 
                         <p class="hero-description">
                             Susan Kare humanized digital interfaces with bitmap graphics
@@ -89,15 +128,18 @@
                         </p>
 
                         <a class="primary-link" href="#works">
-                            EXPLORE HER WORK <span aria-hidden="true">↗</span>
+                            EXPLORE HER WORK <span>↗</span>
                         </a>
+
                     </div>
 
                     <figure class="hero-art">
+
                         <div class="computer-frame">
 
                             <div class="computer-screen">
-                                <div class="happy-face" aria-label="Pixel-art happy computer face">
+
+                                <div class="happy-face">
                                     <span class="face-eye eye-one"></span>
                                     <span class="face-eye eye-two"></span>
                                     <span class="face-nose"></span>
@@ -110,18 +152,22 @@
                                 </div>
 
                                 <div class="screen-slot"></div>
+
                             </div>
 
                             <div class="computer-base"></div>
 
                         </div>
 
-                        <figcaption>FIG. 01 / FRIENDLY COMPUTING</figcaption>
+                        <figcaption>
+                            FIG. 01 / FRIENDLY COMPUTING
+                        </figcaption>
+
                     </figure>
 
                 </section>
 
-                <!-- BIOGRAPHY SECTION -->
+                <!-- BIOGRAPHY -->
                 <section class="biography section-shell" id="biography">
 
                     <h2>THE DESIGNER</h2>
@@ -135,7 +181,7 @@
                                 <span>PORTRAIT.PICT</span>
                             </div>
 
-                            <div class="portrait-art" aria-label="Stylized geometric portrait illustration">
+                            <div class="portrait-art">
                                 <div class="hair"></div>
                                 <div class="neck"></div>
                                 <div class="face"></div>
@@ -169,12 +215,13 @@
                                 </p>
 
                             </div>
+
                         </div>
 
                     </div>
 
-                    <!-- CAREER TIMELINE -->
-                    <div class="timeline" aria-label="Career timeline">
+                    <!-- TIMELINE -->
+                    <div class="timeline">
 
                         <article class="timeline-item">
                             <span class="timeline-node"></span>
@@ -204,7 +251,7 @@
 
                 </section>
 
-                <!-- SELECTED WORKS SECTION -->
+                <!-- SELECTED WORKS -->
                 <section class="works-section" id="works">
 
                     <div class="works-inner">
@@ -241,14 +288,14 @@
 
                                 <div class="work-info">
                                     <h3>HAPPY MACINTOSH <span>1984</span></h3>
-
                                     <p>
                                         A friendly startup face that turned a machine’s status
                                         check into a moment of welcome.
                                     </p>
-
                                     <p class="work-tag">ICON DESIGN</p>
-                                    <p class="work-caption">Essential clarity in a 32 × 32 grid</p>
+                                    <p class="work-caption">
+                                        Essential clarity in a 32 × 32 grid
+                                    </p>
                                 </div>
 
                             </article>
@@ -268,14 +315,14 @@
 
                                 <div class="work-info">
                                     <h3>CHICAGO &amp; GENEVA <span>1984</span></h3>
-
                                     <p>
                                         Early Macintosh screen fonts shaped the first wave
                                         of human-computer typography.
                                     </p>
-
                                     <p class="work-tag">TYPE DESIGN</p>
-                                    <p class="work-caption">Bitmap typefaces made clear</p>
+                                    <p class="work-caption">
+                                        Bitmap typefaces made clear
+                                    </p>
                                 </div>
 
                             </article>
@@ -295,14 +342,14 @@
 
                                 <div class="work-info">
                                     <h3>COMMAND KEY <span>1984</span></h3>
-
                                     <p>
                                         A Swedish campsite symbol became a memorable keyboard
                                         shortcut and a lasting icon.
                                     </p>
-
                                     <p class="work-tag">ICON DESIGN</p>
-                                    <p class="work-caption">One continuous, recognized identity</p>
+                                    <p class="work-caption">
+                                        One continuous, recognized identity
+                                    </p>
                                 </div>
 
                             </article>
@@ -322,14 +369,14 @@
 
                                 <div class="work-info">
                                     <h3>TRASH &amp; PAINT <span>1984</span></h3>
-
                                     <p>
                                         Familiar physical objects made digital files and drawing
                                         tools immediately understandable.
                                     </p>
-
                                     <p class="work-tag">METAPHOR</p>
-                                    <p class="work-caption">Concrete metaphors reduce explanation</p>
+                                    <p class="work-caption">
+                                        Concrete metaphors reduce explanation
+                                    </p>
                                 </div>
 
                             </article>
@@ -344,7 +391,6 @@
 
                                 <div class="work-art cards-art">
                                     <div class="playing-card blue-card"></div>
-
                                     <div class="playing-card white-card">
                                         <b>A</b><span>♥</span>
                                     </div>
@@ -352,14 +398,14 @@
 
                                 <div class="work-info">
                                     <h3>SOLITAIRE CARDS <span>1990</span></h3>
-
                                     <p>
                                         Memorable pixel-art graphics that brought wit and
                                         personality to Microsoft Windows.
                                     </p>
-
                                     <p class="work-tag">GAME GRAPHICS</p>
-                                    <p class="work-caption">Tiny symbols with instant recognition</p>
+                                    <p class="work-caption">
+                                        Tiny symbols with instant recognition
+                                    </p>
                                 </div>
 
                             </article>
@@ -380,14 +426,14 @@
 
                                 <div class="work-info">
                                     <h3>NEXT ICONS <span>1988–91</span></h3>
-
                                     <p>
                                         Isometric system graphics gave Steve Jobs’ NeXT platform
                                         a precise, dimensional vocabulary.
                                     </p>
-
                                     <p class="work-tag">SYSTEM DESIGN</p>
-                                    <p class="work-caption">Depth built from economical pixel planes</p>
+                                    <p class="work-caption">
+                                        Depth built from economical pixel planes
+                                    </p>
                                 </div>
 
                             </article>
@@ -398,7 +444,7 @@
 
                 </section>
 
-                <!-- DESIGN PHILOSOPHY SECTION -->
+                <!-- DESIGN PHILOSOPHY -->
                 <section class="philosophy" id="philosophy">
 
                     <div class="philosophy-inner">
@@ -413,21 +459,27 @@
                                 <span class="gold-dot">•</span>
                                 <div class="principle-icon square-icon"></div>
                                 <h3>SIMPLICITY</h3>
-                                <p>Strip away the noise. Make every pixel earn its place.</p>
+                                <p>
+                                    Strip away the noise. Make every pixel earn its place.
+                                </p>
                             </article>
 
                             <article class="principle">
                                 <span class="gold-dot">•</span>
                                 <div class="principle-icon arrow-icon">→</div>
                                 <h3>CLARITY</h3>
-                                <p>Visual metaphors should be understood at a glance.</p>
+                                <p>
+                                    Visual metaphors should be understood at a glance.
+                                </p>
                             </article>
 
                             <article class="principle">
                                 <span class="gold-dot">•</span>
                                 <div class="principle-icon type-icon">Aa</div>
                                 <h3>LEGIBILITY</h3>
-                                <p>Thoughtful spacing and strong shapes keep interfaces human.</p>
+                                <p>
+                                    Thoughtful spacing and strong shapes keep interfaces human.
+                                </p>
                             </article>
 
                         </div>
@@ -438,19 +490,15 @@
 
                 </section>
 
-                <!-- SOURCES SECTION -->
+                <!-- SOURCES -->
                 <section class="sources-section section-shell" id="sources">
 
                     <div class="sources-intro">
-
                         <p class="eyebrow">04 / FURTHER READING</p>
-
                         <h2>RESEARCH &amp;<br>REFERENCES</h2>
-
                         <p>
                             Explore the people, projects, and design history behind the pixels.
                         </p>
-
                     </div>
 
                     <div class="source-list">
@@ -543,6 +591,8 @@
 
         </div>
     </div>
+
     <script src="app.js" defer></script>
+
 </body>
 </html>

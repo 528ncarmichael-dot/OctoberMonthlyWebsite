@@ -1448,3 +1448,317 @@ h2 {
     grid-template-columns: 1fr;
   }
 }
+
+
+/* =====================================
+   RETRO MOTION + MACINTOSH STARTUP
+   ===================================== */
+
+/* STARTUP SCREEN */
+
+.boot-screen {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    display: grid;
+    place-items: center;
+    padding: 24px;
+    color: #111111;
+    background: #eeeeee;
+    font-family: var(--pixel-font);
+    text-align: center;
+    transition: opacity 0.45s steps(6), visibility 0.45s;
+}
+
+.boot-screen.boot-finished {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.boot-content {
+    width: min(360px, 100%);
+    padding: 34px 24px 25px;
+    background: #ffffff;
+    border: 2px solid #111111;
+    box-shadow: 6px 6px 0 #888888;
+    animation: boot-pop 0.5s steps(4) both;
+}
+
+/* HAPPY MAC ICON */
+
+.boot-happy-mac {
+    position: relative;
+    width: 54px;
+    height: 54px;
+    margin: 0 auto 20px;
+    background: #ffffff;
+    border: 3px solid #111111;
+    box-shadow: 4px 4px 0 #999999;
+}
+
+.boot-eye {
+    position: absolute;
+    top: 15px;
+    left: 12px;
+    width: 5px;
+    height: 7px;
+    background: #111111;
+}
+
+.boot-eye + .boot-eye {
+    left: 32px;
+}
+
+.boot-smile {
+    position: absolute;
+    left: 15px;
+    bottom: 10px;
+    width: 23px;
+    height: 9px;
+    border-bottom: 3px solid #111111;
+    border-left: 3px solid #111111;
+    border-right: 3px solid #111111;
+}
+
+.boot-content h1 {
+    margin: 0 0 8px;
+    font-size: clamp(17px, 4vw, 22px);
+    line-height: 1.3;
+}
+
+.boot-version {
+    margin: 0 0 25px;
+    font-size: 9px;
+    letter-spacing: 1px;
+}
+
+/* LOADING BAR */
+
+.boot-progress {
+    height: 17px;
+    padding: 3px;
+    border: 2px solid #111111;
+    background: #ffffff;
+}
+
+.boot-progress span {
+    display: block;
+    width: 0;
+    height: 100%;
+    background: repeating-linear-gradient(
+        90deg,
+        #111111 0 7px,
+        #ffffff 7px 10px
+    );
+    animation: boot-load 2.3s steps(12) 0.25s forwards;
+}
+
+.boot-loading-text {
+    min-height: 18px;
+    margin: 10px 0 8px;
+    font-size: 10px;
+    animation: boot-text 1s steps(2) infinite;
+}
+
+.boot-skip {
+    padding: 5px 9px;
+    border: 1px solid #111111;
+    background: #eeeeee;
+    color: #111111;
+    font: inherit;
+    font-size: 9px;
+}
+
+.boot-skip:hover {
+    color: #ffffff;
+    background: #111111;
+}
+
+/* REVEAL THE DESKTOP */
+
+.mac-desktop {
+    opacity: 0;
+    transform: translateY(8px);
+}
+
+body.mac-ready .mac-desktop {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.45s ease, transform 0.45s steps(5);
+}
+
+/* FLOATING DESKTOP ICONS */
+
+.desktop-icon-one {
+    animation: icon-float 4s steps(5) 1s infinite;
+}
+
+.desktop-icon-two {
+    animation: icon-float 4.5s steps(5) 1.4s infinite reverse;
+}
+
+.desktop-folder {
+    transition: transform 0.15s steps(3), box-shadow 0.15s steps(3);
+}
+
+.desktop-icon:hover .desktop-folder {
+    transform: translate(-2px, -2px);
+    box-shadow: 5px 5px 0 #777777;
+}
+
+/* RETRO BUTTON MOVEMENT */
+
+.main-nav a,
+.primary-link,
+.source-list a,
+.work-card,
+.principle {
+    transition:
+        transform 0.16s steps(3),
+        box-shadow 0.16s steps(3),
+        background-color 0.16s steps(3);
+}
+
+.main-nav a:hover,
+.primary-link:hover {
+    transform: translateY(-3px);
+    box-shadow: 3px 3px 0 #111111;
+}
+
+.work-card:hover {
+    transform: translate(-3px, -3px);
+    box-shadow: 6px 6px 0 #111111;
+}
+
+.source-list a:hover {
+    transform: translateX(5px);
+}
+
+/* BLINKING CURSOR */
+
+.hero .cursor {
+    animation: caret-blink 1s steps(2) infinite;
+}
+
+/* COMPUTER SCREEN EFFECT */
+
+.computer-screen {
+    position: relative;
+    overflow: hidden;
+}
+
+.computer-screen::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -35%;
+    height: 18%;
+    background: rgba(255, 255, 255, 0.22);
+    pointer-events: none;
+    animation: screen-sweep 6s linear infinite;
+}
+
+.happy-face {
+    animation: happy-bob 3.5s steps(4) infinite;
+}
+
+/* BLINKING TIMELINE DOTS */
+
+.timeline-node {
+    animation: node-blink 2.5s steps(2) infinite;
+}
+
+/* ANIMATIONS */
+
+@keyframes boot-pop {
+    from {
+        opacity: 0;
+        transform: scale(0.94);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes boot-load {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes boot-text {
+    50% {
+        opacity: 0.45;
+    }
+}
+
+@keyframes icon-float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+@keyframes caret-blink {
+    0%, 49% {
+        opacity: 1;
+    }
+
+    50%, 100% {
+        opacity: 0;
+    }
+}
+
+@keyframes screen-sweep {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(750%);
+    }
+}
+
+@keyframes happy-bob {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-3px);
+    }
+}
+
+@keyframes node-blink {
+    0%, 100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.45;
+    }
+}
+
+/* MOBILE AND REDUCED MOTION */
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
